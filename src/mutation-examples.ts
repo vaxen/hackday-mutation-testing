@@ -7,9 +7,10 @@ export const logger = (message: string): void => {
 };
 
 export const guessTheNumber = (value: number): void => {
-  if (value === 4 || value === 7) {
+  if (value == 4 || value == 7) {
     console.log('Right Guess!');
   }
+  
   console.log('Wrong guess try again');
 };
 

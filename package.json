@@ -5,7 +5,8 @@
   "scripts": {
     "start": "ts-node ./src/index.ts",
     "test": "jest",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "test:mutation": "stryker run"
   },
   "keywords": [],
   "author": "",

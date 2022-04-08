@@ -6,16 +6,15 @@ export const logger = (message: string): void => {
   console.log(message);
 };
 
-export const guessTheNumber = (value: number): void => {
+export const guessTheNumber = (value: number): boolean => {
   if (value == 4 || value == 7) {
-    console.log('Right Guess!');
-  }
-  
-  console.log('Wrong guess try again');
+    return true
+  } 
+
+  return false;
 };
 
 export const validateEmail = (email: string): boolean => {
-  return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-    email
-  );
+  return /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  .test(email);
 };

@@ -32,21 +32,19 @@ describe('MutationExamples test suite', () => {
   });
 
   describe('guessTheNumber', () => {
-    jest.spyOn(global.console, 'log');
-    it('should log success message if value is 4', () => {
-      guessTheNumber(4);
-      expect(console.log).toBeCalledWith('Right Guess!');
-    });
+    /* it('should log success message if value is 4', () => {
+      const result = guessTheNumber(4);
+      expect(result).toBeTruthy();
+    }); */
 
     it('should log success message if value is 7', () => {
-      guessTheNumber(7);
-      expect(console.log).toBeCalledWith('Right Guess!');
+      const result = guessTheNumber(7);
+      expect(result).toBeTruthy();
     });
 
     it('should log failure message if value is not 4 or 7', () => {
-      guessTheNumber(11);
-      expect(console.log).toBeCalledWith('Wrong guess try again');
-      expect(console.log).not.toBeCalledWith('Right Guess!');
+      const result = guessTheNumber(777);
+      expect(result).toBeFalsy();
     });
   });
 
